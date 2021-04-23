@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp14
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int el = 0;
+
+            int[] array = { 123, 38, -4, 3, 23, 45, 11, 5999 };
+
+            int num = array[0];
+
+
+            for (int i = 0; i < array.Length; i++)
+
+            {
+                if (array[i] > num)
+                {
+                    num = array[i];
+                    el = i;
+                }
+            }
+
+            Console.WriteLine(el);
+
+            Console.ReadLine();
+        }
+    }
+}

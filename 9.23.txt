@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp21
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] massiv = { 1, 4, 6, 7, 34, -43, 115, 10 };
+
+            int bub;
+            for (int i = 0; i < massiv.Length; i++)
+            {
+                for (int n = 0; n < massiv.Length - 1; n++)
+                {
+
+                    if (massiv[n] > massiv[n + 1])
+                    {
+                        bub = massiv[n + 1];
+                        massiv[n + 1] = massiv[n];
+                        massiv[n] = bub;
+                    }
+
+                }
+            }
+
+            foreach (int rev in massiv)
+                Console.Write($"{rev} ");
+            Console.Read();
+        }
+    }
+}

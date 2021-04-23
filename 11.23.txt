@@ -1,0 +1,115 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp20
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            string name1 = "";
+            Console.WriteLine("vvedite pervoe imya:");
+             name1=Console.ReadLine();
+            
+
+
+            while (name1.Trim().Length == 0)
+            {
+                Console.WriteLine("vvedi pojaluysta imya");
+                name1 = Console.ReadLine();
+            }
+            Console.WriteLine($"perviy cel {name1} ");
+            Console.WriteLine($"{name1} kakoy u tebya vozrast?");
+            int age1 = Convert.ToInt32(Console.ReadLine());
+            
+            while(age1<=0 )
+            {
+                Console.WriteLine($"{name1} vvedi pojaluysta pravilniy vozrast?");
+
+                age1 = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine($"{name1} tebe {age1} let");
+            }
+
+
+            string name2 = "";
+            Console.WriteLine("vvedite vtoroe imya:");
+            name2 = Console.ReadLine();
+
+
+
+            while (name2.Trim().Length == 0)
+            {
+                Console.WriteLine("vvedi pravilnoe imya");
+                name2 = Console.ReadLine();
+            }
+            Console.WriteLine($"perviy cel {name2} ");
+            Console.WriteLine($"{name2} kakoy u tebya vozrast?");
+            int age2 = Convert.ToInt32(Console.ReadLine());
+          
+            while (age2 <= 0)
+            {
+                Console.WriteLine($"{name2} vvedi pojaluysta pravilniy vozrast?");
+
+                age2 = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine($"{name2} tebe {age2} let");
+            }
+
+            Console.WriteLine("Celovek s kakim imenem starwe?");
+            int c;
+            int b;
+
+            string starwiy = Console.ReadLine();
+            if (starwiy == name1 && age1 > age2)
+            {
+                 c = age1 - age2;
+                Console.WriteLine($"vse okay {name1} starwe na {c} let"); 
+            }
+            
+            
+            else if (starwiy == name1 && age1 < age2)
+            {
+                c = age2 - age1;
+                Console.WriteLine($"ti ne prav {name1} mladwe na {c} let"); 
+            }
+
+
+            else if (starwiy == name2 && age2 > age1)
+            {
+                b = age2 - age1;
+                Console.WriteLine($"vse okay {name1} starwe na {b} let");
+            }
+
+            else if (starwiy == name2 && age2 < age1)
+            {
+                b = age1 - age2;
+                Console.WriteLine($"ti ne prav { name1} mladwe na {b} let");
+            }
+
+
+
+
+
+
+
+
+
+
+            Console.ReadKey();
+
+
+
+
+            
+        }
+    }
+}
+

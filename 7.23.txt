@@ -1,0 +1,24 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp16
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] mas = { 12, 10, 43, 55, 76, 3 };
+            int kol = 0;
+
+            foreach (int x in mas)
+                if (x % 2 == 1)
+                    kol++;
+
+            Console.WriteLine($"Количество нечетных элементов массива: {kol}");
+            Console.ReadKey();
+        }
+    }
+}
